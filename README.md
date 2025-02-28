@@ -10,9 +10,10 @@ Para o controle de carga, aumentaremos gradativamente o número de elementos arm
 
 # Como executar os benchmarks
 1. Clone esse repositório
-2. Se utilizando alguma IDE, certifique-se que ela possui acesso ao catálogo central, e procure o arquetipo `org.openjdk.jmh:jmh-$Java-benchmark-archetype`
-3. Compile o projeto digitando `mvn clean install` no seu terminal
-4. Execute os benchmarks
+2. Caso não possua o Maven instalado na sua máquina, certifique-se de instalar seguindo as instruções do site oficial: [Apache Maven](https://maven.apache.org/download.cgi)
+3. Se utilizando alguma IDE, certifique-se que ela possui acesso ao catálogo central, e procure o arquetipo `org.openjdk.jmh:jmh-$Java-benchmark-archetype`
+4. Compile o projeto digitando `mvn clean install` no seu terminal
+5. Execute os benchmarks
 
 # Dependências
 [JMH](https://github.com/openjdk/jmh)
