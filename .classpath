@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="lib" path="C:/Users/kaudr/.m2/repository/org/openjdk/jmh/jmh-core/1.37/jmh-core-1.37.jar" sourcepath="C:/Users/kaudr/.m2/repository/org/openjdk/jmh/jmh-core/1.37/jmh-core-1.37-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.openjdk.jmh"/>
+			<attribute name="maven.artifactId" value="jmh-core"/>
+			<attribute name="maven.version" value="1.37"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path=""/>
+</classpath>
