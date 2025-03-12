@@ -50,4 +50,14 @@ public class ListSearchBenchMark {
     public void acessandoLinkedIndexOf(){
         linkedList.indexOf(500);
     }
+
+    @Benchmark
+    public void buscandoElementosInexistenteArray(){
+        arrayList.contains(-1);
+    }
+
+    @Benchmark
+    public void buscandoElementosInexistenteLinked(){
+        arrayList.contains(-1);
+    }
 }
