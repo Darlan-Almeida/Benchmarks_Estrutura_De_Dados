@@ -41,71 +41,71 @@ public class StreamBenchmark {
     }
 
 
-    //count()
+//    //count()
+//    // --------------------------------------------
+//    @Benchmark
+//    public long hashSetCountStream() {
+//        return hashSet.stream().count();
+//    }
+//
+//    @Benchmark
+//    public long hashSetCountParallelStream() {
+//        return hashSet.parallelStream().count();
+//    }
+//
+//    @Benchmark
+//    public long treeSetCountStream() {
+//        return treeSet.stream().count();
+//    }
+//
+//    @Benchmark
+//    public long treeSetCountParallelStream() {
+//        return treeSet.parallelStream().count();
+//    }
+//
+//    @Benchmark
+//    public long linkedListCountStream() {
+//        return linkedList.stream().count();
+//    }
+//
+//    @Benchmark
+//    public long linkedListCountParallelStream() {
+//        return linkedList.parallelStream().count();
+//    }
+//
+//    @Benchmark
+//    public long arrayListCountStream() {
+//        return arrayList.stream().count();
+//    }
+//
+//    @Benchmark
+//    public long arrayListCountParallelStream() {
+//        return arrayList.parallelStream().count();
+//    }
+
     // --------------------------------------------
-    @Benchmark
-    public long hashSetCountStream() {
-        return hashSet.stream().count();
-    }
 
-    @Benchmark
-    public long hashSetCountParallelStream() {
-        return hashSet.parallelStream().count();
-    }
-
-    @Benchmark
-    public long treeSetCountStream() {
-        return treeSet.stream().count();
-    }
-
-    @Benchmark
-    public long treeSetCountParallelStream() {
-        return treeSet.parallelStream().count();
-    }
-
-    @Benchmark
-    public long linkedListCountStream() {
-        return linkedList.stream().count();
-    }
-
-    @Benchmark
-    public long linkedListCountParallelStream() {
-        return linkedList.parallelStream().count();
-    }
-
-    @Benchmark
-    public long arrayListCountStream() {
-        return arrayList.stream().count();
-    }
-
-    @Benchmark
-    public long arrayListCountParallelStream() {
-        return arrayList.parallelStream().count();
-    }
-
-    // --------------------------------------------
-
-    //distinct()
-    // --------------------------------------------
-    @Benchmark
-    public List<Integer> linkedListDistinctStream() {
-        return linkedList.stream().distinct().collect(Collectors.toList());
-    }
-
-    @Benchmark
-    public List<Integer> linkedListDistinctParallelStream() {
-        return linkedList.parallelStream().distinct().collect(Collectors.toList());
-    }
-
-    @Benchmark
-    public List<Integer> arrayListDistinctStream() {
-        return arrayList.stream().distinct().collect(Collectors.toList());
-    }
-
-    @Benchmark
-    public List<Integer> arrayListDistinctParallelStream() {
-        return arrayList.parallelStream().distinct().collect(Collectors.toList());
-    }
+//    //distinct()
+//    // --------------------------------------------
+//    @Benchmark
+//    public List<Integer> linkedListDistinctStream() {
+//        return linkedList.stream().distinct().collect(Collectors.toList());
+//    }
+//
+//    @Benchmark
+//    public List<Integer> linkedListDistinctParallelStream() {
+//        return linkedList.parallelStream().distinct().collect(Collectors.toList());
+//    }
+//
+//    @Benchmark
+//    public List<Integer> arrayListDistinctStream() {
+//        return arrayList.stream().distinct().collect(Collectors.toList());
+//    }
+//
+//    @Benchmark
+//    public List<Integer> arrayListDistinctParallelStream() {
+//        return arrayList.parallelStream().distinct().collect(Collectors.toList());
+//    }
 
     // --------------------------------------------
 
@@ -153,57 +153,57 @@ public class StreamBenchmark {
 
     // --------------------------------------------
 
-    //forEach()
-    // --------------------------------------------
-    @Benchmark
-    public void hashSetForEachStream() {
-        hashSet.stream().forEach(i -> {});
-    }
-
-    @Benchmark
-    public void hashSetForEachParallelStream() {
-        hashSet.parallelStream().forEach(i -> {});
-    }
-
-    @Benchmark
-    public void treeSetForEachStream() {
-        treeSet.stream().forEach(i -> {});
-    }
-
-    @Benchmark
-    public void treeSetForEachParallelStream() {
-        treeSet.parallelStream().forEach(i -> {});
-    }
-
-    @Benchmark
-    public void linkedListForEachStream() {
-        linkedList.stream().forEach(i -> {});
-    }
-
-    @Benchmark
-    public void linkedListForEachParallelStream() {
-        linkedList.parallelStream().forEach(i -> {});
-    }
-
-    @Benchmark
-    public void linkedListForEachTraditional() {
-        for (Integer i : linkedList) {}
-    }
-
-    @Benchmark
-    public void arrayListForEachStream() {
-        arrayList.stream().forEach(i -> {});
-    }
-
-    @Benchmark
-    public void arrayListForEachParallelStream() {
-        arrayList.parallelStream().forEach(i -> {});
-    }
-
-    @Benchmark
-    public void arrayListForEachTraditional() {
-        for (Integer i : arrayList) {}
-    }
+//    //forEach()
+//    // --------------------------------------------
+//    @Benchmark
+//    public void hashSetForEachStream() {
+//        hashSet.stream().forEach(i -> {});
+//    }
+//
+//    @Benchmark
+//    public void hashSetForEachParallelStream() {
+//        hashSet.parallelStream().forEach(i -> {});
+//    }
+//
+//    @Benchmark
+//    public void treeSetForEachStream() {
+//        treeSet.stream().forEach(i -> {});
+//    }
+//
+//    @Benchmark
+//    public void treeSetForEachParallelStream() {
+//        treeSet.parallelStream().forEach(i -> {});
+//    }
+//
+//    @Benchmark
+//    public void linkedListForEachStream() {
+//        linkedList.stream().forEach(i -> {});
+//    }
+//
+//    @Benchmark
+//    public void linkedListForEachParallelStream() {
+//        linkedList.parallelStream().forEach(i -> {});
+//    }
+//
+//    @Benchmark
+//    public void linkedListForEachTraditional() {
+//        for (Integer i : linkedList) {}
+//    }
+//
+//    @Benchmark
+//    public void arrayListForEachStream() {
+//        arrayList.stream().forEach(i -> {});
+//    }
+//
+//    @Benchmark
+//    public void arrayListForEachParallelStream() {
+//        arrayList.parallelStream().forEach(i -> {});
+//    }
+//
+//    @Benchmark
+//    public void arrayListForEachTraditional() {
+//        for (Integer i : arrayList) {}
+//    }
 
     // --------------------------------------------
 
