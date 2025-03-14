@@ -29,12 +29,12 @@ public class StackBenchmark {
 	private int size;
 	
 	/**
-     * Método de configuração do benchmark. Ele é executado antes de cada iteração do benchmark.
+     * Método de configuração do benchmark. Ele é executado antes de cada chamada do benchmark.
      * Este método inicializa a pilha com números inteiros de 0 até size-1.
      * 
-     * @see Setup(Level.Iteration) 
+     * @see Setup(Level.Invocation) 
      */
-	@Setup(Level.Iteration)
+	@Setup(Level.Invocation)
 	public void setup() {
 		stack = new Stack<>();
 
