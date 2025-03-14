@@ -32,12 +32,12 @@ public class DequeBenchmark {
 	private int size;
 	
 	/**
-     * Método de configuração do benchmark. Ele é executado antes de cada iteração do benchmark.
+     * Método de configuração do benchmark. Ele é executado antes de cada chamada de benchmark.
      * Este método inicializa o deque com números inteiros de 0 até size-1.
      * 
-     * @see Setup(Level.Iteration) 
+     * @see Setup(Level.Invocation) 
      */
-	@Setup(Level.Iteration)
+	@Setup(Level.Invocation)
 	public void setup() {
 		deque = new ArrayDeque<>();
 
