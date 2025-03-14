@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="67b3e9f5-82c9-4d9e-ac43-608a92bc4b55" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/benchmarks/src/main/java/example/com/HashMapHashSetBenchmark.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dados/hashmap_hashset.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/src/main/java/example/com/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/src/main/java/example/com/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarks/src/main/java/example/com/App.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2uHoV9dVxO3B9O5IgQ8BZqLxalg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "hashmap-hashset",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/filip/IdeaProjects/Benchmarks_Estrutura_De_Dados"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Benchmarks_Estrutura_De_Dados" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Benchmarks_Estrutura_De_Dados" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="67b3e9f5-82c9-4d9e-ac43-608a92bc4b55" name="Changes" comment="" />
+      <created>1741914883000</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741914883000</updated>
+    </task>
+    <servers />
+  </component>
+</project>
