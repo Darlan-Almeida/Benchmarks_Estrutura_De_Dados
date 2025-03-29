@@ -4,15 +4,16 @@ import org.openjdk.jmh.annotations.*;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-@BenchmarkMode(Mode.Throughput)
-@OutputTimeUnit(TimeUnit.MILLISECONDS)
-@State(Scope.Thread)
+
+@BenchmarkMode(Mode.All)
+@OutputTimeUnit(TimeUnit.MILLISECONDS) // Unidade de tempo no resultado
+@State(Scope.Thread) // Cada thread tem sua própria instância
 public class TreeMapBenchmark {
     private TreeMap<Integer, Integer> treeMap;
     private Random random;
     private int[] dataset;
 
-    @Param({"10" , "20"}) // Tamanhos variáveis para o benchmark
+    @Param({"1000", "10000", "100000"}) // Tamanhos diferentes para teste
     private int size;
 
     @Setup(Level.Trial) // Inicializa apenas uma vez por tamanho
@@ -31,7 +32,7 @@ public class TreeMapBenchmark {
     }
 
     @Benchmark
-    public boolean testSearch() {
+    public boolean testContains() {
         return treeMap.containsKey(dataset[random.nextInt(dataset.length)]);
     }
 

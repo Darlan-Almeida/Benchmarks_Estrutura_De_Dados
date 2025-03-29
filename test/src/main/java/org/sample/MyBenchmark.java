@@ -9,7 +9,8 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 import org.sample.estruturas.BSTBenchmark;
 import org.sample.estruturas.TreeMapBenchmark;
 import org.sample.estruturas.TreeSetBenchmark;
-
+import org.sample.estruturas.TreeSetBenchmark;
+import org.sample.estruturas.PriorityDequeBenchmark;
 public class MyBenchmark {
 
     @Benchmark
@@ -18,6 +19,7 @@ public class MyBenchmark {
                 .include(BSTBenchmark.class.getSimpleName())
                 .include(TreeMapBenchmark.class.getSimpleName())
                 .include(TreeSetBenchmark.class.getSimpleName())
+                .include(PriorityDequeBenchmark.class.getSimpleName())
                 .forks(1)
                 .result("resultados.json")
                 .resultFormat(ResultFormatType.JSON)

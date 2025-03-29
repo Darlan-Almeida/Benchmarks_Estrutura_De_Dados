@@ -11,7 +11,7 @@ import org.openjdk.jmh.annotations.Scope;
 import org.openjdk.jmh.annotations.Setup;
 import org.openjdk.jmh.annotations.State;
 
-@BenchmarkMode(Mode.Throughput) 
+@BenchmarkMode(Mode.All) 
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Thread)
 public class BSTBenchmark {
@@ -19,7 +19,7 @@ public class BSTBenchmark {
     private Random random;
     private int[] dataset;
 
-    @Param({"100", "1000", "10000"}) // Testando diferentes tamanhos de BST
+    @Param({"1000", "10000", "100000"}) // Tamanhos diferentes para teste
     private int size;
 
     @Setup(Level.Trial) // Inicializa a BST apenas uma vez por tamanho de teste
