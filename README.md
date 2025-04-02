@@ -82,7 +82,7 @@ Esse comportamento evidencia a vantagem das árvores balanceadas para operaçõe
 
 Essa análise mostra que, apesar de árvores balanceadas garantirem previsibilidade nos custos das operações de busca, a estrutura desbalanceada pode apresentar vantagens em cenários específicos de inserção ordenada.
 
-![Gráfico](img/bstBuscasMaxMIn.png.png)
+![Gráfico](img/bstBuscasMaxMin.png.png)
 
 
 #### Busca pelo elemento:
@@ -107,11 +107,11 @@ Essa análise mostra que, apesar de árvores balanceadas garantirem previsibilid
   
 Em uma árvore desbalanceada, as operações podem degradar para **`O(n)`** no pior caso, pois pode ser necessário percorrer toda a estrutura para encontrar o sucessor ou predecessor.
 
-![Gráfico](img/Buscas.png)
+![Gráfico](img/bstBuscas.png)
 
 #### Percurso In-Order
 
-![Gráfico](img/inOrder.png)
+![Gráfico](img/bstinOrder.png)
 
 
 No benchmark apresentado, o percurso **in-order** na árvore balanceada (`testInOrderTraversalBalanced`) mostrou-se mais lento do que na árvore desbalanceada (`testInOrderTraversalUnbalanced`). Esse resultado pode parecer contraintuitivo à primeira vista.
