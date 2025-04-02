@@ -74,7 +74,8 @@ Esse comportamento evidencia a vantagem das árvores balanceadas para operaçõe
 ```Node min(Node node) {
         if (node.left == null) return node;
         else return min(node.left);
-    }```
+    }
+```
 
 - Vale ressaltar que, caso as inserções fossem feitas em ordem decrescente, o comportamento se inverteria, tornando a busca do mínimo mais custosa na árvore desbalanceada.
 - Na árvore balanceada, essa operação mantém a complexidade **`O(log(n))`**, independentemente da ordem de inserção.
