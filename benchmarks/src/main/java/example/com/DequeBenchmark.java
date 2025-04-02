@@ -1,4 +1,4 @@
-package benchmarks.src.main.java.example.com;
+package example.com;
 
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
@@ -16,8 +16,8 @@ import java.util.concurrent.TimeUnit;
  * Essa classe utiliza o JMH (Java Microbenchmarking Harness) para medir o desempenho de várias operações de deque em diferentes tamanhos de estrutura.
  * Cada operação é medida individualmente, e os resultados são reportados em termos de throughput (operações por segundo).
  */
-@BenchmarkMode(Mode.Throughput) // Mede a taxa de operações por segundo
-@OutputTimeUnit(TimeUnit.MILLISECONDS) // Unidade de tempo no resultado
+@BenchmarkMode(Mode.AverageTime) // Mede a taxa de operações por segundo
+@OutputTimeUnit(TimeUnit.NANOSECONDS) // Unidade de tempo no resultado
 @State(Scope.Thread) // Cada thread tem sua própria instância
 public class DequeBenchmark {
 	

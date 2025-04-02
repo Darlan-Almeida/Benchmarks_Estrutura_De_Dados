@@ -1,4 +1,4 @@
-package benchmarks.src.main.java.example.com;
+package example.com;
 
 import org.openjdk.jmh.results.format.ResultFormatType;
 import org.openjdk.jmh.runner.Runner;
@@ -26,7 +26,7 @@ public class MainDeque {
 	public static void main(String[] args) throws RunnerException {
 		// Cria as opções de configuração para o JMH.
 		Options opt = new OptionsBuilder().include(DequeBenchmark.class.getSimpleName()) // Define que o benchmark a ser executado é o DequeBenchmark.
-				.result("DequeBenchmark.json") // Define que o resultado do benchmark será salvo no arquivo DequeBenchmark.json.
+				.result("dados/DequeBenchmark.json") // Define que o resultado do benchmark será salvo no arquivo DequeBenchmark.json.
 				.resultFormat(ResultFormatType.JSON) // Define que o formato do resultado será JSON.
 				.forks(1) // Define o número de forks (execuções independentes) do benchmark. Aqui, está configurado para 1 fork
 				.build();

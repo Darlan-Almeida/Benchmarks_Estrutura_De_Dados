@@ -1,4 +1,4 @@
-package benchmarks.src.main.java.example.com;
+package example.com;
 
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
@@ -13,8 +13,8 @@ import java.util.concurrent.TimeUnit;
  * O objetivo deste benchmark é medir o throughput (taxa de operações por segundo) das operações
  * de pilha, como push, pop e peek em diferentes tamanhos de pilha.
  */
-@BenchmarkMode(Mode.Throughput) // Mede a taxa de operações por segundo
-@OutputTimeUnit(TimeUnit.MILLISECONDS) // Unidade de tempo no resultado
+@BenchmarkMode(Mode.AverageTime) // Mede a taxa de operações por segundo
+@OutputTimeUnit(TimeUnit.NANOSECONDS) // Unidade de tempo no resultado
 @State(Scope.Thread) // Cada thread tem sua própria instância
 public class StackBenchmark {
 	
