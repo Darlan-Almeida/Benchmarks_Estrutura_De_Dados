@@ -111,7 +111,7 @@ Em uma árvore desbalanceada, as operações podem degradar para **`O(n)`** no p
 
 #### Percurso In-Order
 
-![Gráfico](img/bstinOrder.png)
+![Gráfico](img/bstinorder.png)
 
 
 No benchmark apresentado, o percurso **in-order** na árvore balanceada (`testInOrderTraversalBalanced`) mostrou-se mais lento do que na árvore desbalanceada (`testInOrderTraversalUnbalanced`). Esse resultado pode parecer contraintuitivo à primeira vista.
