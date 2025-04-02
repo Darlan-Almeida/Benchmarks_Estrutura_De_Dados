@@ -82,7 +82,7 @@ Esse comportamento evidencia a vantagem das árvores balanceadas para operaçõe
 
 Essa análise mostra que, apesar de árvores balanceadas garantirem previsibilidade nos custos das operações de busca, a estrutura desbalanceada pode apresentar vantagens em cenários específicos de inserção ordenada.
 
-![Gráfico](img/bstBuscasMaxMin.png.png)
+![Gráfico](img/bstBuscasMaxMin.png)
 
 
 #### Busca pelo elemento:
