@@ -33,7 +33,7 @@ import org.openjdk.jmh.results.AggregationPolicy;
 import org.openjdk.jmh.runner.FailureAssistException;
 
 import org.sample.estruturas.jmh_generated.BSTBenchmark_jmhType;
-public final class BSTBenchmark_testRemove_jmhTest {
+public final class BSTBenchmark_testMaxUnbalanced_jmhTest {
 
     byte p000, p001, p002, p003, p004, p005, p006, p007, p008, p009, p010, p011, p012, p013, p014, p015;
     byte p016, p017, p018, p019, p020, p021, p022, p023, p024, p025, p026, p027, p028, p029, p030, p031;
@@ -58,7 +58,7 @@ public final class BSTBenchmark_testRemove_jmhTest {
     Blackhole blackhole;
     Control notifyControl;
 
-    public BenchmarkTaskResult testRemove_Throughput(InfraControl control, ThreadParams threadParams) throws Throwable {
+    public BenchmarkTaskResult testMaxUnbalanced_Throughput(InfraControl control, ThreadParams threadParams) throws Throwable {
         this.benchmarkParams = control.benchmarkParams;
         this.iterationParams = control.iterationParams;
         this.threadParams    = threadParams;
@@ -75,18 +75,20 @@ public final class BSTBenchmark_testRemove_jmhTest {
 
             control.announceWarmupReady();
             while (control.warmupShouldWait) {
-                l_bstbenchmark0_0.testRemove();
+                l_bstbenchmark0_0.setUp();
+                blackhole.consume(l_bstbenchmark0_0.testMaxUnbalanced());
                 if (control.shouldYield) Thread.yield();
                 res.allOps++;
             }
 
             notifyControl.startMeasurement = true;
-            testRemove_thrpt_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, l_bstbenchmark0_0);
+            testMaxUnbalanced_thrpt_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, l_bstbenchmark0_0);
             notifyControl.stopMeasurement = true;
             control.announceWarmdownReady();
             try {
                 while (control.warmdownShouldWait) {
-                    l_bstbenchmark0_0.testRemove();
+                    l_bstbenchmark0_0.setUp();
+                    blackhole.consume(l_bstbenchmark0_0.testMaxUnbalanced());
                     if (control.shouldYield) Thread.yield();
                     res.allOps++;
                 }
@@ -106,19 +108,22 @@ public final class BSTBenchmark_testRemove_jmhTest {
             res.measuredOps *= opsPerInv;
             res.measuredOps /= batchSize;
             BenchmarkTaskResult results = new BenchmarkTaskResult((long)res.allOps, (long)res.measuredOps);
-            results.add(new ThroughputResult(ResultRole.PRIMARY, "testRemove", res.measuredOps, res.getTime(), benchmarkParams.getTimeUnit()));
+            results.add(new ThroughputResult(ResultRole.PRIMARY, "testMaxUnbalanced", res.measuredOps, res.getTime(), benchmarkParams.getTimeUnit()));
             this.blackhole.evaporate("Yes, I am Stephen Hawking, and know a thing or two about black holes.");
             return results;
         } else
             throw new IllegalStateException("Harness failed to distribute threads among groups properly");
     }
 
-    public static void testRemove_thrpt_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, BSTBenchmark_jmhType l_bstbenchmark0_0) throws Throwable {
+    public static void testMaxUnbalanced_thrpt_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, BSTBenchmark_jmhType l_bstbenchmark0_0) throws Throwable {
         long operations = 0;
         long realTime = 0;
         result.startTime = System.nanoTime();
         do {
-            l_bstbenchmark0_0.testRemove();
+            l_bstbenchmark0_0.setUp();
+            long rt = System.nanoTime();
+            blackhole.consume(l_bstbenchmark0_0.testMaxUnbalanced());
+            realTime += (System.nanoTime() - rt);
             operations++;
         } while(!control.isDone);
         result.stopTime = System.nanoTime();
@@ -127,7 +132,7 @@ public final class BSTBenchmark_testRemove_jmhTest {
     }
 
 
-    public BenchmarkTaskResult testRemove_AverageTime(InfraControl control, ThreadParams threadParams) throws Throwable {
+    public BenchmarkTaskResult testMaxUnbalanced_AverageTime(InfraControl control, ThreadParams threadParams) throws Throwable {
         this.benchmarkParams = control.benchmarkParams;
         this.iterationParams = control.iterationParams;
         this.threadParams    = threadParams;
@@ -144,18 +149,20 @@ public final class BSTBenchmark_testRemove_jmhTest {
 
             control.announceWarmupReady();
             while (control.warmupShouldWait) {
-                l_bstbenchmark0_0.testRemove();
+                l_bstbenchmark0_0.setUp();
+                blackhole.consume(l_bstbenchmark0_0.testMaxUnbalanced());
                 if (control.shouldYield) Thread.yield();
                 res.allOps++;
             }
 
             notifyControl.startMeasurement = true;
-            testRemove_avgt_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, l_bstbenchmark0_0);
+            testMaxUnbalanced_avgt_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, l_bstbenchmark0_0);
             notifyControl.stopMeasurement = true;
             control.announceWarmdownReady();
             try {
                 while (control.warmdownShouldWait) {
-                    l_bstbenchmark0_0.testRemove();
+                    l_bstbenchmark0_0.setUp();
+                    blackhole.consume(l_bstbenchmark0_0.testMaxUnbalanced());
                     if (control.shouldYield) Thread.yield();
                     res.allOps++;
                 }
@@ -175,19 +182,22 @@ public final class BSTBenchmark_testRemove_jmhTest {
             res.measuredOps *= opsPerInv;
             res.measuredOps /= batchSize;
             BenchmarkTaskResult results = new BenchmarkTaskResult((long)res.allOps, (long)res.measuredOps);
-            results.add(new AverageTimeResult(ResultRole.PRIMARY, "testRemove", res.measuredOps, res.getTime(), benchmarkParams.getTimeUnit()));
+            results.add(new AverageTimeResult(ResultRole.PRIMARY, "testMaxUnbalanced", res.measuredOps, res.getTime(), benchmarkParams.getTimeUnit()));
             this.blackhole.evaporate("Yes, I am Stephen Hawking, and know a thing or two about black holes.");
             return results;
         } else
             throw new IllegalStateException("Harness failed to distribute threads among groups properly");
     }
 
-    public static void testRemove_avgt_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, BSTBenchmark_jmhType l_bstbenchmark0_0) throws Throwable {
+    public static void testMaxUnbalanced_avgt_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, BSTBenchmark_jmhType l_bstbenchmark0_0) throws Throwable {
         long operations = 0;
         long realTime = 0;
         result.startTime = System.nanoTime();
         do {
-            l_bstbenchmark0_0.testRemove();
+            l_bstbenchmark0_0.setUp();
+            long rt = System.nanoTime();
+            blackhole.consume(l_bstbenchmark0_0.testMaxUnbalanced());
+            realTime += (System.nanoTime() - rt);
             operations++;
         } while(!control.isDone);
         result.stopTime = System.nanoTime();
@@ -196,7 +206,7 @@ public final class BSTBenchmark_testRemove_jmhTest {
     }
 
 
-    public BenchmarkTaskResult testRemove_SampleTime(InfraControl control, ThreadParams threadParams) throws Throwable {
+    public BenchmarkTaskResult testMaxUnbalanced_SampleTime(InfraControl control, ThreadParams threadParams) throws Throwable {
         this.benchmarkParams = control.benchmarkParams;
         this.iterationParams = control.iterationParams;
         this.threadParams    = threadParams;
@@ -213,7 +223,8 @@ public final class BSTBenchmark_testRemove_jmhTest {
 
             control.announceWarmupReady();
             while (control.warmupShouldWait) {
-                l_bstbenchmark0_0.testRemove();
+                l_bstbenchmark0_0.setUp();
+                blackhole.consume(l_bstbenchmark0_0.testMaxUnbalanced());
                 if (control.shouldYield) Thread.yield();
                 res.allOps++;
             }
@@ -223,12 +234,13 @@ public final class BSTBenchmark_testRemove_jmhTest {
             int batchSize = iterationParams.getBatchSize();
             int opsPerInv = benchmarkParams.getOpsPerInvocation();
             SampleBuffer buffer = new SampleBuffer();
-            testRemove_sample_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, buffer, targetSamples, opsPerInv, batchSize, l_bstbenchmark0_0);
+            testMaxUnbalanced_sample_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, buffer, targetSamples, opsPerInv, batchSize, l_bstbenchmark0_0);
             notifyControl.stopMeasurement = true;
             control.announceWarmdownReady();
             try {
                 while (control.warmdownShouldWait) {
-                    l_bstbenchmark0_0.testRemove();
+                    l_bstbenchmark0_0.setUp();
+                    blackhole.consume(l_bstbenchmark0_0.testMaxUnbalanced());
                     if (control.shouldYield) Thread.yield();
                     res.allOps++;
                 }
@@ -245,14 +257,14 @@ public final class BSTBenchmark_testRemove_jmhTest {
             res.allOps /= batchSize;
             res.measuredOps *= opsPerInv;
             BenchmarkTaskResult results = new BenchmarkTaskResult((long)res.allOps, (long)res.measuredOps);
-            results.add(new SampleTimeResult(ResultRole.PRIMARY, "testRemove", buffer, benchmarkParams.getTimeUnit()));
+            results.add(new SampleTimeResult(ResultRole.PRIMARY, "testMaxUnbalanced", buffer, benchmarkParams.getTimeUnit()));
             this.blackhole.evaporate("Yes, I am Stephen Hawking, and know a thing or two about black holes.");
             return results;
         } else
             throw new IllegalStateException("Harness failed to distribute threads among groups properly");
     }
 
-    public static void testRemove_sample_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, SampleBuffer buffer, int targetSamples, long opsPerInv, int batchSize, BSTBenchmark_jmhType l_bstbenchmark0_0) throws Throwable {
+    public static void testMaxUnbalanced_sample_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, SampleBuffer buffer, int targetSamples, long opsPerInv, int batchSize, BSTBenchmark_jmhType l_bstbenchmark0_0) throws Throwable {
         long realTime = 0;
         long operations = 0;
         int rnd = (int)System.nanoTime();
@@ -260,6 +272,8 @@ public final class BSTBenchmark_testRemove_jmhTest {
         long time = 0;
         int currentStride = 0;
         do {
+            l_bstbenchmark0_0.setUp();
+            long rt = System.nanoTime();
             rnd = (rnd * 1664525 + 1013904223);
             boolean sample = (rnd & rndMask) == 0;
             if (sample) {
@@ -267,7 +281,7 @@ public final class BSTBenchmark_testRemove_jmhTest {
             }
             for (int b = 0; b < batchSize; b++) {
                 if (control.volatileSpoiler) return;
-                l_bstbenchmark0_0.testRemove();
+                blackhole.consume(l_bstbenchmark0_0.testMaxUnbalanced());
             }
             if (sample) {
                 buffer.add((System.nanoTime() - time) / opsPerInv);
@@ -277,6 +291,7 @@ public final class BSTBenchmark_testRemove_jmhTest {
                     rndMask = (rndMask << 1) + 1;
                 }
             }
+            realTime += (System.nanoTime() - rt);
             operations++;
         } while(!control.isDone);
         startRndMask = Math.max(startRndMask, rndMask);
@@ -285,7 +300,7 @@ public final class BSTBenchmark_testRemove_jmhTest {
     }
 
 
-    public BenchmarkTaskResult testRemove_SingleShotTime(InfraControl control, ThreadParams threadParams) throws Throwable {
+    public BenchmarkTaskResult testMaxUnbalanced_SingleShotTime(InfraControl control, ThreadParams threadParams) throws Throwable {
         this.benchmarkParams = control.benchmarkParams;
         this.iterationParams = control.iterationParams;
         this.threadParams    = threadParams;
@@ -302,7 +317,7 @@ public final class BSTBenchmark_testRemove_jmhTest {
             notifyControl.startMeasurement = true;
             RawResults res = new RawResults();
             int batchSize = iterationParams.getBatchSize();
-            testRemove_ss_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, batchSize, l_bstbenchmark0_0);
+            testMaxUnbalanced_ss_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, batchSize, l_bstbenchmark0_0);
             control.preTearDown();
 
             if (control.isLastIteration()) {
@@ -311,19 +326,22 @@ public final class BSTBenchmark_testRemove_jmhTest {
             int opsPerInv = control.benchmarkParams.getOpsPerInvocation();
             long totalOps = opsPerInv;
             BenchmarkTaskResult results = new BenchmarkTaskResult(totalOps, totalOps);
-            results.add(new SingleShotResult(ResultRole.PRIMARY, "testRemove", res.getTime(), totalOps, benchmarkParams.getTimeUnit()));
+            results.add(new SingleShotResult(ResultRole.PRIMARY, "testMaxUnbalanced", res.getTime(), totalOps, benchmarkParams.getTimeUnit()));
             this.blackhole.evaporate("Yes, I am Stephen Hawking, and know a thing or two about black holes.");
             return results;
         } else
             throw new IllegalStateException("Harness failed to distribute threads among groups properly");
     }
 
-    public static void testRemove_ss_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, int batchSize, BSTBenchmark_jmhType l_bstbenchmark0_0) throws Throwable {
+    public static void testMaxUnbalanced_ss_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, int batchSize, BSTBenchmark_jmhType l_bstbenchmark0_0) throws Throwable {
         long realTime = 0;
         result.startTime = System.nanoTime();
         for (int b = 0; b < batchSize; b++) {
             if (control.volatileSpoiler) return;
-            l_bstbenchmark0_0.testRemove();
+            l_bstbenchmark0_0.setUp();
+            long rt = System.nanoTime();
+            blackhole.consume(l_bstbenchmark0_0.testMaxUnbalanced());
+            realTime += (System.nanoTime() - rt);
         }
         result.stopTime = System.nanoTime();
         result.realTime = realTime;
@@ -341,7 +359,6 @@ public final class BSTBenchmark_testRemove_jmhTest {
                 f = org.sample.estruturas.BSTBenchmark.class.getDeclaredField("size");
                 f.setAccessible(true);
                 f.set(val, Integer.valueOf(control.getParam("size")));
-            val.setUp();
             f_bstbenchmark0_0 = val;
         }
         return val;

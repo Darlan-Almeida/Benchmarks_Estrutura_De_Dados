@@ -4,8 +4,8 @@ import org.openjdk.jmh.annotations.*;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-@BenchmarkMode(Mode.All) // Mede a taxa de operações por segundo
-@OutputTimeUnit(TimeUnit.MILLISECONDS) // Unidade de tempo no resultado
+@BenchmarkMode(Mode.AverageTime) // Mede a taxa de operações por segundo
+@OutputTimeUnit(TimeUnit.NANOSECONDS) // Unidade de tempo no resultado
 @State(Scope.Thread) // Cada thread tem sua própria instância
 
 public class TreeSetBenchmark {
@@ -13,7 +13,7 @@ public class TreeSetBenchmark {
     private Random random;
     private int[] dataset;
 
-    @Param({"1000", "10000", "100000"}) // Tamanhos diferentes para teste
+    @Param({"1000", "10000", "100000"})  // Tamanhos diferentes para teste
     private int size;
 
     @Setup(Level.Trial) // Inicializa apenas uma vez por tamanho

@@ -5,15 +5,15 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 
-@BenchmarkMode(Mode.All)
-@OutputTimeUnit(TimeUnit.MILLISECONDS) // Unidade de tempo no resultado
+@BenchmarkMode(Mode.AverageTime)
+@OutputTimeUnit(TimeUnit.NANOSECONDS) // Unidade de tempo no resultado
 @State(Scope.Thread) // Cada thread tem sua própria instância
 public class TreeMapBenchmark {
     private TreeMap<Integer, Integer> treeMap;
     private Random random;
     private int[] dataset;
 
-    @Param({"1000", "10000", "100000"}) // Tamanhos diferentes para teste
+    @Param({"1000", "10000", "100000"})  // Tamanhos diferentes para teste
     private int size;
 
     @Setup(Level.Trial) // Inicializa apenas uma vez por tamanho
