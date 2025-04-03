@@ -10,10 +10,7 @@ inline,org/sample/estruturas/BSTBenchmark.testMaxUnbalanced
 inline,org/sample/estruturas/BSTBenchmark.testMinBalanced
 inline,org/sample/estruturas/BSTBenchmark.testMinUnbalanced
 inline,org/sample/estruturas/PriorityDequeBenchmark.setUp
-inline,org/sample/estruturas/PriorityDequeBenchmark.testContains
 inline,org/sample/estruturas/PriorityDequeBenchmark.testInsert
-inline,org/sample/estruturas/PriorityDequeBenchmark.testPeek
-inline,org/sample/estruturas/PriorityDequeBenchmark.testRemove
 inline,org/sample/estruturas/TreeMapBenchmark.setUp
 inline,org/sample/estruturas/TreeMapBenchmark.testContains
 inline,org/sample/estruturas/TreeMapBenchmark.testInsert

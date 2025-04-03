@@ -142,19 +142,26 @@ Para o experimento, foram utilizados os metódos da API PriorityDeque de JAVA. E
 ### Análise dos Resultados
 ### Inserção
 
-- **testInsert**: A inserção em uma Priority Deque tem complexidade `O(log n)` devido à manutenção da ordenação na estrutura de heap.
+- **testInsert**: A inserção em uma Priority Deque tem complexidade `O(log n)` devido à manutenção da ordenação na estrutura de heap a cada inserção de elemento. Isso para cumprir o conceito de que todos os nós filhos tem valores menores do que o nó pai
+![Gráfico](img/heapInsert.png)
+
 
 ### Remoção
 
 - **testRemove**: A remoção segue `O(log n)` em média, pois envolve a reestruturação da heap para manter a prioridade correta dos elementos.
+![Gráfico](img/heapRemove.png)
+
 
 ### Contém
 
 - **testContains**: A busca por um elemento pode ter um custo elevado, chegando a `O(n)` no pior caso.
+![Gráfico](img/heapContains.png)
+
 
 ### Consulta do Elemento de Maior Prioridade
 
 - **testPeek**: A operação de *peek* (consulta ao elemento de maior prioridade) ocorre em `O(1)`, já que o topo da heap mantém o elemento prioritário acessível diretamente.
+![Gráfico](img/heapPeek.png)
 
 ### Resumo
 - **testInsert (Priority Deque)**: Inserção ocorre em `O(log n)`.
@@ -174,29 +181,43 @@ Para este experimento, foram analisadas as operações em `TreeSet` e `TreeMap`,
 O `TreeSet` é baseado em uma árvore balanceada, garantindo eficiência nas operações fundamentais.
 
 #### Inserção (`testInsert`)
+![Gráfico](img/treeInsert.png)
+
 - **Complexidade:** `O(log n)`
 - A estrutura mantém a ordenação dos elementos, garantindo inserções eficientes.
 
+
+
 #### Busca (`testContains`)
+![Gráfico](img/treeContains.png)
+
 - **Complexidade:** `O(log n)`
 - A busca percorre a árvore até localizar o elemento desejado.
 
 #### Remoção (`testRemove`)
+![Gráfico](img/treeRemove.png)
 - **Complexidade:** `O(log n)`
 - Envolve reorganizar a árvore para preservar sua propriedade de ordenação.
 
+
 #### Busca de Elementos Específicos (`testFloor/testCeiling`)
+![Gráfico](img/treeFloorCeil.png)
+
 - **Complexidade:** `O(log n)`
 - `testFloor`: Encontra o maior elemento menor ou igual ao valor consultado.
 - `testCeiling`: Encontra o menor elemento maior ou igual ao valor consultado.
 
 #### Busca do Mínimo e Máximo (`testMin/testMax`)
+![Gráfico](img/treeMaxMin.png)
+
 - **Complexidade:** `O(1)`
 - A estrutura mantém referências diretas para os extremos, garantindo acessos imediatos.
 
 #### Iteração Reversa (`testDescendingIteration`)
 - **Complexidade:** `O(n)`
 - Gera uma cópia reversa da árvore, exigindo percorrer todos os elementos.
+![Gráfico](img/testDescendingIteration.png)
+
 
 ### Resumo das Operações
 
