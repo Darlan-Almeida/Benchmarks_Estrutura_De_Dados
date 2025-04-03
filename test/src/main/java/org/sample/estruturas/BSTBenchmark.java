@@ -51,6 +51,38 @@ public class BSTBenchmark {
 
 
     @Benchmark
+    public void testInsertBalanced() {
+        bstBalanced.add(random.nextInt(100000));
+    }
+
+    @Benchmark
+    public void testInsertUnbalanced() {
+        bstUnbalanced.add(random.nextInt(100000));
+    }
+
+
+    
+    @Benchmark
+    public boolean testSearchBalanced() {
+        return bstBalanced.search(dataset[random.nextInt(dataset.length)]) != null;
+    }
+
+    @Benchmark
+    public boolean testSearchUnbalanced() {
+        return bstUnbalanced.search(dataset[random.nextInt(dataset.length)]) != null;
+    }
+
+    @Benchmark
+    public void testRemoveBalanced() {
+        bstBalanced.remove(dataset[random.nextInt(dataset.length)]);
+    }
+
+    @Benchmark
+    public void testRemoveUnbalanced() {
+        bstUnbalanced.remove(dataset[random.nextInt(dataset.length)]);
+    }
+
+    @Benchmark
     public int testMinBalanced() {
         Node minNode = bstBalanced.min();
         return (minNode != null) ? minNode.value : -1;
@@ -74,5 +106,51 @@ public class BSTBenchmark {
         return (maxNode != null) ? maxNode.value : -1;
     }
 
-    
+    @Benchmark
+    public Integer testPredecessorBalanced() {
+        Node node = bstBalanced.search(dataset[random.nextInt(dataset.length)]);
+        Node predecessor = bstBalanced.predecessor(node);
+        return (predecessor != null) ? predecessor.value : null;
+    }
+
+    @Benchmark
+    public Integer testPredecessorUnbalanced() {
+        Node node = bstUnbalanced.search(dataset[random.nextInt(dataset.length)]);
+        Node predecessor = bstUnbalanced.predecessor(node);
+        return (predecessor != null) ? predecessor.value : null;
+    }
+
+    @Benchmark
+    public Integer testSuccessorBalanced() {
+        Node node = bstBalanced.search(dataset[random.nextInt(dataset.length)]);
+        Node successor = bstBalanced.sucessor(node);
+        return (successor != null) ? successor.value : null;
+    }
+
+    @Benchmark
+    public Integer testSuccessorUnbalanced() {
+        Node node = bstUnbalanced.search(dataset[random.nextInt(dataset.length)]);
+        Node successor = bstUnbalanced.sucessor(node);
+        return (successor != null) ? successor.value : null;
+    }
+
+    @Benchmark
+    public void testInOrderTraversalBalanced() {
+        bstBalanced.inOrder();
+    }
+
+    @Benchmark
+    public void testInOrderTraversalUnbalanced() {
+        bstUnbalanced.inOrder();
+    }
+
+    @Benchmark
+    public List<Integer> testLevelOrderTraversalBalanced() {
+        return bstBalanced.bfs();
+    }
+
+    @Benchmark
+    public List<Integer> testLevelOrderTraversalUnbalanced() {
+        return bstUnbalanced.bfs();
+    }
 }

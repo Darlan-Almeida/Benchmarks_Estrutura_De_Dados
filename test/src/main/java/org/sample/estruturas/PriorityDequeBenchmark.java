@@ -33,14 +33,26 @@ public class PriorityDequeBenchmark {
         return uniqueNumbers.stream().mapToInt(Integer::intValue).toArray();
     }
 
+
     @Benchmark
-    public void testInsert() {
-        if (priorityDeque.size() > size) {
-            priorityDeque.poll(); // Remove o menor elemento para evitar crescimento indefinido
-        }
-        priorityDeque.add(random.nextInt(10000));
+    public Integer testRemove() {
+        return priorityDeque.poll();
     }
 
+    @Benchmark
+    public Integer testPeek() {
+        return priorityDeque.peek();
+    }
+
+    @Benchmark
+    public boolean testContains() {
+        return priorityDeque.contains(dataset[random.nextInt(dataset.length)]);
+    }
+
+    @Benchmark
+    public void testInsert() {
+        priorityDeque.add(random.nextInt(10000));
+    }
 
 
    

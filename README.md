@@ -178,7 +178,7 @@ Para este experimento, foram analisadas as operações em `TreeSet` e `TreeMap`,
 
 ### Eficiência nas Operações do TreeSet
 
-O `TreeSet` é baseado em uma árvore balanceada, garantindo eficiência nas operações fundamentais.
+O `TreeSet` é uma implementação de NavigableSet baseada em um TreeMap. Os elementos são ordenados usando sua ordem natural ou por um Comparator fornecido no momento da criação do conjunto.
 
 #### Inserção (`testInsert`)
 ![Gráfico](img/treeInsert.png)
@@ -229,27 +229,37 @@ O `TreeSet` é baseado em uma árvore balanceada, garantindo eficiência nas ope
 - **testDescendingIteration:** `O(n)`
 ### Eficiência nas Operações do TreeMap
 
-O `TreeMap` utiliza uma estrutura similar ao `TreeSet`, mas organiza os elementos com base em pares chave-valor. Suas operações possuem complexidades similares.
+O `TreeMap` é Uma implementação de NavigableMap baseada em uma árvore Red-Black. O mapa é ordenado de acordo com a ordem natural de suas chaves ou por um Comparator fornecido no momento da criação do mapa
 
 #### Inserção (`testInsert`)
 - **Complexidade:** `O(log n)`
 - Mantém a ordenação das chaves automaticamente.
+![Gráfico](img/mapInsert.png)
+
 
 #### Busca (`testContains`)
 - **Complexidade:** `O(log n)`
 - Exige percorrer a árvore para verificar a existência da chave consultada.
+![Gráfico](img/mapContains.png)
+
 
 #### Remoção (`testRemove`)
 - **Complexidade:** `O(log n)`
 - Necessária reestruturação da árvore após a remoção.
+![Gráfico](img/mapRemove.png)
+
 
 #### Busca do Mínimo e Máximo (`testMin/testMax`)
 - **Complexidade:** `O(1)`
 - As referências diretas aos extremos garantem acessos rápidos.
+![Gráfico](img/mapMaxMin.png)
+
 
 #### Iteração sobre o Conjunto de Chaves (`testKeySetIteration`)
 - **Complexidade:** `O(n)`
 - Todas as chaves são percorridas de forma ordenada.
+![Gráfico](img/mapIteration.png)
+
 
 ### Resumo das Operações
 
@@ -270,5 +280,6 @@ A análise confirma que ambas as estruturas são eficientes para operações ord
 A escolha da estrutura depende do caso de uso: se precisar de busca rápida, use HashMap; para ordenação, prefira TreeSet/TreeMap; se precisar de prioridade, use PriorityDeque.
 
 
-# Dependências
-[JMH](https://github.com/openjdk/jmh)
+# Referencias
+
+[Java Documentation](https://github.com/openjdk/jmh)

@@ -12,11 +12,6 @@ inline,org/sample/estruturas/BSTBenchmark.testMinUnbalanced
 inline,org/sample/estruturas/PriorityDequeBenchmark.setUp
 inline,org/sample/estruturas/PriorityDequeBenchmark.testInsert
 inline,org/sample/estruturas/TreeMapBenchmark.setUp
-inline,org/sample/estruturas/TreeMapBenchmark.testContains
-inline,org/sample/estruturas/TreeMapBenchmark.testInsert
-inline,org/sample/estruturas/TreeMapBenchmark.testKeySetIteration
-inline,org/sample/estruturas/TreeMapBenchmark.testMax
-inline,org/sample/estruturas/TreeMapBenchmark.testMin
 inline,org/sample/estruturas/TreeMapBenchmark.testRemove
 inline,org/sample/estruturas/TreeSetBenchmark.setUp
 inline,org/sample/estruturas/TreeSetBenchmark.testCeiling
