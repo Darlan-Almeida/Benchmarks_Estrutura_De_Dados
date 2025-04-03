@@ -17,12 +17,9 @@ Para o controle de carga, aumentaremos gradativamente o número de elementos arm
 
 
 # Detalhes do ambiente em que o benchmark foi executado
-darlan_almeida@tigre:~/Benchmarks_Estrutura_De_Dados$ java --version 
 openjdk 11.0.26 2025-01-21
 OpenJDK Runtime Environment (build 11.0.26+4-post-Ubuntu-1ubuntu122.04)
 OpenJDK 64-Bit Server VM (build 11.0.26+4-post-Ubuntu-1ubuntu122.04, mixed mode, sharing
-
-maquina:
 
 # Análise das estruturas
 
@@ -276,8 +273,6 @@ A análise confirma que ambas as estruturas são eficientes para operações ord
 - **BST** é eficiente quando balanceada, mas pode ter desempenho ruim caso contrário.
 - **PriorityDeque** é ótima para operações de prioridade, mas não é eficiente para buscas arbitrárias.
 - **TreeSet e TreeMap** oferecem ordenação automática, com desempenho logarítmico para operações básicas.
-
-A escolha da estrutura depende do caso de uso: se precisar de busca rápida, use HashMap; para ordenação, prefira TreeSet/TreeMap; se precisar de prioridade, use PriorityDeque.
 
 
 # Referencias
