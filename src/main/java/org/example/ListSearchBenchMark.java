@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.LinkedList;
 import java.util.concurrent.TimeUnit;
 
-@BenchmarkMode(Mode.Throughput)
+@BenchmarkMode(Mode.AverageTime)
 @State(Scope.Thread)
-@OutputTimeUnit(TimeUnit.MILLISECONDS)
+@OutputTimeUnit(TimeUnit.NANOSECONDS)
 
 public class ListSearchBenchMark {
 

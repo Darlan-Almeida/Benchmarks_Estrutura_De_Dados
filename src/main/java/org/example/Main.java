@@ -11,8 +11,8 @@ public class Main {
         Options opt = new OptionsBuilder()
                 .include(ListSearchBenchMark.class.getSimpleName()) // Nome da classe de benchmark
                 .forks(1) // Número de forks (execuções independentes)
-                .result("SearchTests.json")
-                .resultFormat(ResultFormatType.JSON)
+                //.result("SearchBenchmarkAT.json")
+                //.resultFormat(ResultFormatType.JSON)
                 .build();
 
         new Runner(opt).run();

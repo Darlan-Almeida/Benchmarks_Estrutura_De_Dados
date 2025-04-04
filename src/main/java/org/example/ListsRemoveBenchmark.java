@@ -17,7 +17,7 @@ public class ListsRemoveBenchmark {
    @Param({"1000", "100000", "1000000"})
     private int size;
 
-   @Setup(Level.Iteration)
+   @Setup(Level.Invocation)
     public void setup() {
        arrayList = new ArrayList<>();
        linkedList = new LinkedList<>();
@@ -29,18 +29,20 @@ public class ListsRemoveBenchmark {
        }
    }
 
-   @Benchmark
+    @Benchmark
     public void arrayRemoveFirst() {
-       arrayList.add(0, -1);
-       arrayList.remove(0);
-   }
-
+        if (!arrayList.isEmpty()) {
+            arrayList.remove(0);
+        }
+    }
 
     @Benchmark
     public void linkedRemoveFirst() {
-        linkedList.add(0, -1);
-        linkedList.remove(0);
+        if (!linkedList.isEmpty()) {
+            linkedList.remove(0);
+        }
     }
+
 
 
     @Benchmark
@@ -51,7 +53,7 @@ public class ListsRemoveBenchmark {
 
     @Benchmark
     public void linkedRemoveLast(){
-        linkedList.remove(linkedList.size() - 1);
+        linkedList.removeLast();
     }
 
     @Benchmark
