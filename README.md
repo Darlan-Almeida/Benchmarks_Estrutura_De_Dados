@@ -1,19 +1,8 @@
-# Benchmarks - Estrutura de Dados
-# Overview
-Este projeto visa realizar benchmarks detalhados de diversas estruturas de dados em Java, utilizando a ferramenta Java MicroBenchmarking Harness (JMH). 
+# Notebook com análise entre ArrayList e Linked list
 
-Para isso, será implementado um conjunto de benchmarks, através da ferramenta de código aberto, para avaliar o desempenho das estruturas em operações indispensáveis em programação, como acesso, inserção, remoção, pesquisa e ordenação. A motivação está em entender os trade-offs associados a diferentes escolhas de estrutura e algoritmos, especialmente em situações pertinentes, como de carga elevada. A relevância do trabalho está em sua aplicação prática e paradidática, uma vez que os resultados obtidos no benchmark dos custos sobre as operações possibilita a interpretação dos fenômenos alinhada as análises assintóticas das implementações. Portanto, ao obter dados concretos de diferentes estruturas de dados e casos particulares, a tomada de decisão fica mais clara, à medida que se pode comparar distintas possibilidades de implementação de estruturas de dados, de acordo com a problemática. 
-# Funcionalidades
-Utilizando o projeto open source JMH, desenvolveremos códigos para benchmarks, executaremos os experimentos, coletaremos os resultados e realizaremos análises detalhadas. As análises incluirão a interpretação dos resultados com base em complexidades assintóticas para compreender os padrões observados e validar hipóteses de desempenho.
+### Aviso Importante!
+A análise detalhada da minha contribuição do projeto se encontra no seguinte link, também encontrado na devida branch "arraylist-linkedlist":
+https://docs.google.com/document/d/1qqiowe7P045ePLsMOLhi3epTh72UjZ360y60Dor-yY4/edit?usp=sharing
 
-Para o controle de carga, aumentaremos gradativamente o número de elementos armazenados nas estruturas e a quantidade de operações realizadas. Com isso, compararemos o impacto no desempenho à medida que os tamanhos das estruturas aumentam e o desempenho de diferentes algoritmos para resolução de uma mesma problemática.
-
-# Como executar os benchmarks
-1. Clone esse repositório
-2. Caso não possua o Maven instalado na sua máquina, certifique-se de instalar seguindo as instruções do site oficial: [Apache Maven](https://maven.apache.org/download.cgi)
-3. Se utilizando alguma IDE, certifique-se que ela possui acesso ao catálogo central, e procure o arquetipo `org.openjdk.jmh:jmh-$Java-benchmark-archetype`
-4. Compile o projeto digitando `mvn clean install` no seu terminal
-5. Execute os benchmarks
-
-# Dependências
-[JMH](https://github.com/openjdk/jmh)
+A existência desse README, fundamentalmente, respeita a padronização feita pelo grupo de agregar conjuntamente as diferentes análises realizadas. Análise também se encontra no arquivo de markdown vizinho, mas recomendo a avaliação pelo documento do link, visto que está mais organizado e com os gráficos sem bugs de visualização. 
+Outrossim, como único integrante que fez um notebook, me interessei em deixar essa branch como acervo de ferramentas que usei. Por fim, tive conflitos de inserir um arquivo ipynb na branch com os testes "arraylist-linkedlist" e, por isso, criei esta separada.
