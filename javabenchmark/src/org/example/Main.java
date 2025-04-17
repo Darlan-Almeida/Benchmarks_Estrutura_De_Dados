@@ -10,9 +10,9 @@ public class Main {
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
                 .include(FilterCollectStreamBenchmark.class.getSimpleName())
-                //.include(FindAnyStreamBenchmark.class.getSimpleName())// Nome da classe de benchmark
-                //.include(ForEachStreamBenchmark.class.getSimpleName())// Nome da classe de benchmark
-                .forks(1) // Número de forks (execuções independentes)
+                .include(DistinctStreamBenchmark.class.getSimpleName())
+                .include(ForEachStreamBenchmark.class.getSimpleName())
+                .forks(1)
                 .result("resultados.json")
                 .resultFormat(ResultFormatType.JSON)
                 .build();

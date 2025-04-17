@@ -99,6 +99,11 @@ Já no TreeSet, há um custo altíssimo para volumes de dados elevados, pois a e
 Conclusão: quando possível, utilizar o for each tradicional torna-se mais vantajoso por ser mais otimizado nativamente pela JVM.
 
 
+### Bônus
+
+Implementação simplória de uma árvore de decisão, onde o usuário interage via CLI e é direcionado para a estrutura de dado mais compatível, dentre as listadas, com os custos assintóticos escolhidos associados às operações básicas.
+
+
 # Referências
 
 [Java Documentation](https://github.com/openjdk/jmh)
