@@ -5,10 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67b3e9f5-82c9-4d9e-ac43-608a92bc4b55" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/benchmarks/src/main/java/example/com/HashMapHashSetBenchmark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dados/hashmap_hashset.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/benchmarks/src/main/java/example/com/App.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/HashMapGet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/HashMapIteration.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/HashMapPut.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/HashMapRemove.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/HashSetAdd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/HashSetContains.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/HashSetIteration.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/HashSetRemove.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/benchmarks/src/main/java/example/com/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarks/src/main/java/example/com/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/src/main/java/example/com/HashMapHashSetBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/benchmarks/src/main/java/example/com/HashMapHashSetBenchmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmarks/src/main/java/example/com/ListBenchmark.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dados/list_e_linkedlist.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/BenchmarkList" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/BenchmarkList" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/CompilerHints" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/CompilerHints" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/benchmarks/src/main/java/example/com/ListBenchmark.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/example/com/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/example/com/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/example/com/HashMapHashSetBenchmark.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/example/com/HashMapHashSetBenchmark.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,10 +40,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2uHoV9dVxO3B9O5IgQ8BZqLxalg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,6 +58,11 @@
     "last_opened_file_path": "C:/Users/filip/IdeaProjects/Benchmarks_Estrutura_De_Dados"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\filip\IdeaProjects\Benchmarks_Estrutura_De_Dados\img" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Benchmarks_Estrutura_De_Dados" />

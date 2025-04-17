@@ -6,8 +6,8 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
-@BenchmarkMode(Mode.Throughput) // Mede operações por unidade de tempo
-@OutputTimeUnit(TimeUnit.MILLISECONDS) // Unidades em milissegundos
+@BenchmarkMode(Mode.AverageTime) // Mede operações por unidade de tempo
+@OutputTimeUnit(TimeUnit.NANOSECONDS) // Unidades em milissegundos
 @State(Scope.Thread) // Cada thread tem seu próprio estado
 public class HashMapHashSetBenchmark {
 
@@ -85,4 +85,3 @@ public class HashMapHashSetBenchmark {
         }
     }
 }
-
