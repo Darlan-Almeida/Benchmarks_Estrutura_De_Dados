@@ -22,7 +22,7 @@ public class ListBenchmark {
     /**
      * Diferentes quantidades de entradas usadas nos benchmarks
      */
-    @Param({"1000", "10000", "100000"}) // Tamanhos diferentes para teste
+    @Param({"1000", "100000", "1000000"}) // Tamanhos diferentes para teste
     private int size;
 
     /**
